@@ -106,8 +106,9 @@ public class TimePageSteps {
 
 	}
 	@Then("^I see \"([^\"]*)\" and \"([^\"]*)\" is displayed$")
-	public void i_see_and_is_displayed(String arg1, String arg2) throws Throwable {
-	    
+	public void i_see_and_is_displayed(String customerName, String projectName) throws Throwable {
+		String actulaprojectname = time.getTableVerify(customerName);
+		Assert.assertEquals(projectName, actulaprojectname);
 	}
 	@When("^Click Search$")
 	public void click_Search() throws Throwable {

@@ -2,6 +2,7 @@ package com.syntax.pages;
 
 import java.util.List;
 
+import org.apache.velocity.runtime.directive.Foreach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -79,4 +80,20 @@ public class TimePage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
+	public String getTableVerify(String customerNam) {
+
+		String actualValue = null;
+		List<WebElement> customerRow = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
+
+		for (WebElement webElement : customerRow) {
+			String nameCustomer = webElement.getText();
+			if (nameCustomer.contains(customerNam)) {
+
+				actualValue = webElement.findElement(By.xpath("td[3]")).getText();
+
+			}
+
+		}
+		return actualValue;
+	}
 }
