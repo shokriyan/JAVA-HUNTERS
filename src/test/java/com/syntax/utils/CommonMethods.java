@@ -24,22 +24,7 @@ public class CommonMethods extends BaseClass {
 		elm.click();
 	}
 	
-	public static void jScriptExecutorClick (WebElement element) {
-		JavascriptExecutor click= (JavascriptExecutor) driver;
-		click.executeScript("argument[0].click()",element);
-	}
-	
-	public static void jScriptExecutorScroll(WebElement element) {
-		JavascriptExecutor scroll = (JavascriptExecutor) driver;
-		scroll.executeAsyncScript("argument[0].scrollIntoView(True)", element);
-	}
-	
-	public static void clickonLinks(String linkText) {
-		WebElement elm = driver.findElement(By.linkText(linkText));
-		WebElement linkElement = waiting(elm);
-		linkElement.click();
-		
-	}
+
 	
 	public static void selectDropdown (WebElement element, String value) {
 		Select dropdown= new Select(element);
