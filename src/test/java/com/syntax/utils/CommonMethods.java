@@ -20,4 +20,11 @@ public class CommonMethods extends BaseClass {
 		WebElement elm = waiting(element);
 		elm.click();
 	}
+	public static void clearing(WebElement clearr) {
+		clearr.clear();
+		
+	}
+	public static void enterText(WebElement text,String value) {
+		text.sendKeys(value);
+	}
 }
