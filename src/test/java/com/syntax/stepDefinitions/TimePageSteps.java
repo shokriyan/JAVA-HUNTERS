@@ -29,17 +29,17 @@ public class TimePageSteps {
 
 	@Given("^I am on Time Module$")
 	public void i_am_on_Time_Module() throws Throwable {
-		CommonMethods.clickOnLinks("Time");
+		CommonMethods.clickOnLink("Time");
 	}
 
 	@When("^I click Project info$")
 	public void i_click_Project_info() throws Throwable {
-		CommonMethods.clickOnLinks("Project Info");
+		CommonMethods.clickOnLink("Project Info");
 	}
 
 	@When("^I select Customers$")
 	public void i_select_Customers() throws Throwable {
-		CommonMethods.clickOnLinks("Customers");
+		CommonMethods.clickOnLink("Customers");
 	}
 
 	@When("^I click on Add button$")
@@ -63,8 +63,8 @@ public class TimePageSteps {
 	
 	@When("^I navigate to project report$")
 	public void i_navigate_to_project_report() throws Throwable {
-		CommonMethods.clickOnLinks("Project Info");
-		CommonMethods.clickOnLinks("Projects");
+		CommonMethods.clickOnLink("Project Info");
+		CommonMethods.clickOnLink("Projects");
 	}
 
 	@When("^I see that \"([^\"]*)\" is displayed in the Customers table$")
@@ -76,7 +76,7 @@ public class TimePageSteps {
 
 	@When("^I select Projects$")
 	public void i_select_Projects() throws Throwable {
-		CommonMethods.clickOnLinks("Projects");
+		CommonMethods.clickOnLink("Projects");
 	}
 
 	@When("^I enter \"([^\"]*)\" from the previous entry$")
