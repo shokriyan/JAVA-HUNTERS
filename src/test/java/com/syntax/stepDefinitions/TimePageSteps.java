@@ -1,0 +1,116 @@
+package com.syntax.stepDefinitions;
+
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import com.syntax.pages.LoginPage;
+import com.syntax.pages.TimePage;
+import com.syntax.utils.BaseClass;
+import com.syntax.utils.CommonMethods;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class TimePageSteps {
+	LoginPage log;
+	TimePage time;
+
+	@Given("^I logged into OrangeHRM by \"([^\"]*)\" and  \"([^\"]*)\"$")
+	public void i_logged_into_OrangeHRM_by_and(String uName, String pwd) throws Throwable {
+		log = new LoginPage();
+		CommonMethods.enterValue(log.username, uName);
+		CommonMethods.enterValue(log.password, pwd);
+		CommonMethods.click(log.btnLogin);
+	}
+
+	@Given("^I am on Time Module$")
+	public void i_am_on_Time_Module() throws Throwable {
+		CommonMethods.clickOnLinks("Time");
+	}
+
+	@When("^I click Project info$")
+	public void i_click_Project_info() throws Throwable {
+		CommonMethods.clickOnLinks("Project Info");
+	}
+
+	@When("^I select Customers$")
+	public void i_select_Customers() throws Throwable {
+		CommonMethods.clickOnLinks("Customers");
+	}
+
+	@When("^I click on Add button$")
+	public void i_click_on_Add_button() throws Throwable {
+		time = new TimePage();
+		CommonMethods.click(time.addBtn);
+	}
+
+	@When("^I add \"([^\"]*)\"and \"([^\"]*)\"$")
+	public void i_add_and(String customerName, String description) throws Throwable {
+		CommonMethods.enterValue(time.customerName, customerName);
+		CommonMethods.enterValue(time.customerDesc, description);
+
+	}
+
+	@When("^I click Save$")
+	public void i_click_Save() throws Throwable {
+		CommonMethods.click(time.saveBtn);
+		
+	}
+	
+	@When("^I navigate to project report$")
+	public void i_navigate_to_project_report() throws Throwable {
+		CommonMethods.clickOnLinks("Project Info");
+		CommonMethods.clickOnLinks("Projects");
+	}
+
+	@When("^I see that \"([^\"]*)\" is displayed in the Customers table$")
+	public void i_see_that_is_displayed_in_the_Customers_table(String customerName) throws Throwable {
+		String name = time.getTableInfo(customerName);
+		Assert.assertEquals(customerName, name);
+
+	}
+
+	@When("^I select Projects$")
+	public void i_select_Projects() throws Throwable {
+		CommonMethods.clickOnLinks("Projects");
+	}
+
+	@When("^I enter \"([^\"]*)\" from the previous entry$")
+	public void i_enter_from_the_previous_entry(String CusName) throws Throwable {
+		time.custoemrName.click();
+		CommonMethods.enterValue(time.custoemrName, CusName);
+		
+		time.custoemrName.sendKeys(Keys.TAB);
+	}
+
+	@When("^I add the \"([^\"]*)\"$")
+	public void i_add_the(String projName) throws Throwable {
+		CommonMethods.enterValue(time.projectName, projName);
+	}
+
+	@When("^I select \"([^\"]*)\" from default employees$")
+	public void i_select_from_default_employees(String projAdmin) throws Throwable {
+		time.projectAdmin.click();
+		CommonMethods.enterValue(time.projectAdmin, projAdmin);
+		time.projectAdmin.sendKeys(Keys.TAB);
+	}
+
+	@When("^I see \"([^\"]*)\" and \"([^\"]*)\" is saved$")
+	public void i_see_and_is_saved(String custName, String projeName) throws Throwable {
+		String actulaprojectname = time.getTableProject(custName);
+		Assert.assertEquals(projeName, actulaprojectname);
+
+	}
+	@Then("^I see \"([^\"]*)\" and \"([^\"]*)\" is displayed$")
+	public void i_see_and_is_displayed(String arg1, String arg2) throws Throwable {
+	    
+	}
+	@When("^Click Search$")
+	public void click_Search() throws Throwable {
+	  CommonMethods.click(time.searchBtn);
+	}
+}

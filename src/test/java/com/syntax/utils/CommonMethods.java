@@ -1,5 +1,6 @@
 package com.syntax.utils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,5 +20,10 @@ public class CommonMethods extends BaseClass {
 	public static void click(WebElement element) {
 		WebElement elm = waiting(element);
 		elm.click();
+	}
+	public static void clickOnLinks(String linkText) {
+		WebElement linkElement = driver.findElement(By.linkText(linkText));
+        WebElement waitedElement = waiting(linkElement);
+        waitedElement.click();
 	}
 }

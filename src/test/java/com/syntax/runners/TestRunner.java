@@ -6,9 +6,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features= {"src/test/resources/features"}
+@CucumberOptions(features= {"src/test/resources/features/TimeModule.feature"}
 				, glue= {"com/syntax/stepDefinitions"}
-				, dryRun=false)
+				, dryRun=false
+				,tags= {"@Verifying"}
+				)
 
 public class TestRunner {
 
