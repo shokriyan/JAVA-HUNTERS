@@ -12,7 +12,7 @@ Feature: Login feature
   Scenario Outline: Invalid login
     When I enter "<username>" and "<password>"
     And I click on login button
-    Then I see error message "<errorMessage>"
+    Then I see error message "<errorMessage>" 
 
     Examples: 
       | username | password  | errorMessage             |
