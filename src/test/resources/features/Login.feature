@@ -8,11 +8,11 @@ Feature: Login feature
     When I enter "admin" and "admin123"
     And I click on login button
     Then I successfully logged in
-
+@invalid
   Scenario Outline: Invalid login
     When I enter "<username>" and "<password>"
     And I click on login button
-    Then I see error message "<errorMessage>"
+    Then I see error message "<errorMessage>" 
 
     Examples: 
       | username | password  | errorMessage             |
