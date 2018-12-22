@@ -2,6 +2,7 @@ package com.syntax.utils;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods extends BaseClass {
@@ -20,4 +21,17 @@ public class CommonMethods extends BaseClass {
 		WebElement elm = waiting(element);
 		elm.click();
 	}
+		public static void dropDown(WebElement dd, String slect) {
+			Select select=new Select(dd);
+			select.selectByVisibleText(slect);
+			
+		}
+		
+		public static void dropDownv(WebElement dd, String value) {
+			Select select=new Select(dd);
+			select.selectByValue(value);
+			
+		}
+		
+	
 }
