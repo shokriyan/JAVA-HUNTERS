@@ -10,7 +10,6 @@ import cucumber.api.junit.Cucumber;
 				, glue= {"com/syntax/stepDefinitions"}
 				, dryRun=false
 				)
-
 public class TestRunner {
 
 }

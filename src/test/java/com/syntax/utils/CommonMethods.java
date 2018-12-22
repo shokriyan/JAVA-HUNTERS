@@ -1,6 +1,7 @@
 package com.syntax.utils;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,6 +23,7 @@ public class CommonMethods extends BaseClass {
 		WebElement elm = waiting(element);
 		elm.click();
 	}
+
 
 	public static void clickOnLink(String linkText) {
 		WebElement linkElement = driver.findElement(By.linkText(linkText));
