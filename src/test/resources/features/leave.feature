@@ -48,8 +48,8 @@ Feature: Ability to add Entitlements
 
     Examples: 
       | employeeName   | leaveType   | balance | fromDate   | toDate     | newBalance |
-      | Linda Anderson | FMLA US     |    50.0 | 10-12-2018 | 14-12-2018 |         45 |
-      | John Smith     | Vacation US |    50.0 | 10-12-2018 | 14-12-2018 |         45 |
+      | Linda Anderson | FMLA US     |    50.0 | 2018-12-10 | 2018-12-14 |         45 |
+      | John Smith     | Vacation US |    50.0 | 2018-12-10 | 2018-12-14 |         45 |
 
   @scenario4
   Scenario Outline: Leave List report functionality
@@ -65,5 +65,5 @@ Feature: Ability to add Entitlements
 
     Examples: 
       | fromDate   | toDate     | leaveStatus | emoloyeeName   | subUnit        | leaveType   | daynums |
-      | 10-12-2018 | 14-12-2018 | All         | Linda Anderson | Administration | FMLA US     |    5.00 |
-      | 10-12-2018 | 14-12-2018 | All         | John Smith     | Administration | Vacation US |    5.00 |
+      | 2018-12-10 | 2018-12-14 | All         | Linda Anderson | Administration | FMLA US     |    5.00 |
+      | 2018-12-10 | 2018-12-14 | All         | John Smith     | Administration | Vacation US |    5.00 |
