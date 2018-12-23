@@ -114,9 +114,5 @@ public class AddEmployeeSteps {
 
 	}
 
-	@Then("^I see error message \"([^\"]*)\"$")
-	public void i_see_error_message(String arg1) throws Throwable {
-
-	}
 
 }

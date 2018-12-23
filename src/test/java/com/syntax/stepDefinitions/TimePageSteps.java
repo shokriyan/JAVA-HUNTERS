@@ -97,8 +97,8 @@ public class TimePageSteps {
 		String actulaprojectname = time.getTableVerify(customerName);
 		Assert.assertEquals(projectName, actulaprojectname);
 	}
-	@When("^Click Search$")
-	public void click_Search() throws Throwable {
+	@When("^I Click Search$")
+	public void i_click_Search() throws Throwable {
 	  CommonMethods.click(time.searchBtn);
 	}
 }

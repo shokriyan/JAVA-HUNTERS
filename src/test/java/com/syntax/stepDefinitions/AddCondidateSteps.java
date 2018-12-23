@@ -103,8 +103,8 @@ public class AddCondidateSteps extends BaseClass {
 		CommonMethods.selectDropdown(condidate.searchMethod, MethodsOfApplication);
 	}
 
-	@When("^Click Search$")
-	public void click_Search()  {
+	@When("^Click Search button$")
+	public void click_Search_button()  {
 	    CommonMethods.click(condidate.searchBtn);
 	}
 
