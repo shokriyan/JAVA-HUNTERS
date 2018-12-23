@@ -2,30 +2,17 @@ package com.syntax.stepDefinitions;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
-import com.syntax.pages.LoginPage;
 import com.syntax.pages.TimePage;
-import com.syntax.utils.BaseClass;
 import com.syntax.utils.CommonMethods;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class TimePageSteps {
-	LoginPage log;
 	TimePage time;
 
-	@Given("^I logged into OrangeHRM by \"([^\"]*)\" and  \"([^\"]*)\"$")
-	public void i_logged_into_OrangeHRM_by_and(String uName, String pwd) throws Throwable {
-		log = new LoginPage();
-		CommonMethods.enterValue(log.username, uName);
-		CommonMethods.enterValue(log.password, pwd);
-		CommonMethods.click(log.btnLogin);
-	}
 
 	@Given("^I am on Time Module$")
 	public void i_am_on_Time_Module() throws Throwable {
@@ -110,8 +97,8 @@ public class TimePageSteps {
 		String actulaprojectname = time.getTableVerify(customerName);
 		Assert.assertEquals(projectName, actulaprojectname);
 	}
-	@When("^Click Search$")
-	public void click_Search() throws Throwable {
+	@When("^I Click Search$")
+	public void i_click_Search() throws Throwable {
 	  CommonMethods.click(time.searchBtn);
 	}
 }

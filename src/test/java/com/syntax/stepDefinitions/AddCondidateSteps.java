@@ -1,17 +1,12 @@
 package com.syntax.stepDefinitions;
 
-import java.util.List;
-import java.util.Map;
 
 import org.junit.Assert;
 
 import com.syntax.pages.AddCondidate;
-import com.syntax.pages.LoginPage;
 import com.syntax.utils.BaseClass;
 import com.syntax.utils.CommonMethods;
 
-import cucumber.api.DataTable;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -19,17 +14,7 @@ import cucumber.api.java.en.When;
 public class AddCondidateSteps extends BaseClass {
 
 	AddCondidate condidate;
-	LoginPage login;
 
-	@Given("^User enter userName \"([^\"]*)\" and password \"([^\"]*)\" and click$")
-	public void user_enter_userName_and_password_and_click(String userName, String pwd) throws Throwable {
-		login = new LoginPage();
-
-		CommonMethods.enterValue(login.username, userName);
-		CommonMethods.enterValue(login.password, pwd);
-		CommonMethods.click(login.btnLogin);
-
-	}
 
 	@When("^User click Recruitment Module and click Candidates$")
 	public void user_click_Recruitment_Module_and_click_Candidates() {
@@ -118,8 +103,8 @@ public class AddCondidateSteps extends BaseClass {
 		CommonMethods.selectDropdown(condidate.searchMethod, MethodsOfApplication);
 	}
 
-	@When("^Click Search$")
-	public void click_Search()  {
+	@When("^Click Search button$")
+	public void click_Search_button()  {
 	    CommonMethods.click(condidate.searchBtn);
 	}
 
