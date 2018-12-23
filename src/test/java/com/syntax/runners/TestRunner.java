@@ -8,7 +8,11 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features= {"src/test/resources/features"}
 				, glue= {"com/syntax/stepDefinitions"}
-				,tags= {}
+				,plugin= { "pretty"
+				, "html:src/target/cucumber-defualt-reports"
+				,"json:target/cucumber.json"
+				}
+				,tags= {"@Add"}
 				, dryRun=false
 				)
 public class TestRunner {
