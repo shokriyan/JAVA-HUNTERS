@@ -22,18 +22,6 @@ public class PerformancePageSteps extends BaseClass {
 
 	PerformancePage perform;
 
-	@Given("^I logged into OrangeHRM \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void i_logged_into_OrangeHRM_and(String username, String password) throws Throwable {
-		LoginPage login = new LoginPage();
-		CommonMethods.enterValue(login.username, username);
-		CommonMethods.enterValue(login.password, password);
-		CommonMethods.click(login.btnLogin);
-		//login.username.click();
-		//login.username.clear();
-		//login.username.sendKeys(Keys.ENTER);
-		
-
-	}
 
 	@When("^I click Performance Module and click Configure and click KPI$")
 	public void i_click_Performance_Module_and_click_Configure_and_click_KPI() {
