@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import com.syntax.pages.AddEmployeePage;
-import com.syntax.pages.LoginPage;
 import com.syntax.utils.BaseClass;
 import com.syntax.utils.CommonMethods;
 
@@ -16,24 +15,12 @@ public class AddEmployeeSteps {
 
 	AddEmployeePage AddEmpPage;
 	String EmpFullName;
-	LoginPage login;
 	String EditEmployee;
 
-	@Given("^I logged into OrangeHRM \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void i_logged_into_OrangeHRM_and(String arg1, String arg2)  throws Throwable {
-		AddEmpPage = new AddEmployeePage();
-		login = new LoginPage();
-		Assert.assertTrue(login.logo.isDisplayed());
-		
-		CommonMethods.enterValue(login.username, arg1);
-		CommonMethods.enterText(login.password, arg2);
-		CommonMethods.click(login.btnLogin);
-
-	}
 
 	@When("^I will click on PIM link and then click to the Add Employee Page$")
 	public void i_will_click_on_PIM_link_and_then_click_to_the_Add_Employee_Page() throws Throwable {
-
+		AddEmpPage = new AddEmployeePage();
 		CommonMethods.click(AddEmpPage.PIMlink);
 		CommonMethods.click(AddEmpPage.AddEmployeeLnk);
 	}
