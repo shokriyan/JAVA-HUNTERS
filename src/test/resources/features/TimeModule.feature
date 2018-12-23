@@ -3,7 +3,7 @@
 Feature: Time Module Feature
 
   Background: 
-    Given I logged into OrangeHRM by "admin" and  "admin123"
+    Given I logged into OrangeHRM "Admin" and "admin123"
 
   @Adding
   Scenario Outline: adding customers
@@ -44,7 +44,7 @@ Feature: Time Module Feature
     And I select Projects
     And I enter "<customername>" from the previous entry
     And I enter "<projectName>" from the previous entry
-    And Click Search
+    And I Click Search
     Then I see "<customername>" and "<projectName>" is displayed
 
     Examples: 

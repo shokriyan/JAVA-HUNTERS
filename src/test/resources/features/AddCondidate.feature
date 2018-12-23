@@ -26,7 +26,7 @@ Feature: add Candidates
     And I Enter "<CandidatesName>" from the previous entry
     And Select "<DateofApplication>"  the previous entry
     And Select "<MethodsOfApplication>" to Manual
-    And Click Search
+    And Click Search button
     Then I see Candidate is present "<CandidateName>"
 
     Examples: 
