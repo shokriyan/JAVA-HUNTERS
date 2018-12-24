@@ -1,9 +1,10 @@
 #Author: SyntaxTeam
+@login
 Feature: Login feature
 
   Background: 
     Given OrangeHRM logo is displayed
-
+@valid
   Scenario: Valid login
     When I enter "admin" and "admin123"
     And I click on login button
@@ -16,7 +17,7 @@ Feature: Login feature
 
     Examples: 
       | username | password  | errorMessage             |
-      | Admin    | Monkey123 | Invalid credentials      |
+      | Admin    | Monkey123 | Invalid credentials     |
       | Monkey   | admin123  | Invalid credentials      |
       | Monkey   | Monkey123 | Invalid credentials      |
       |          | admin123  | Username cannot be empty |

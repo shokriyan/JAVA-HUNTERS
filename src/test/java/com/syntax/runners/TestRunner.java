@@ -12,8 +12,9 @@ import cucumber.api.junit.Cucumber;
 				, "html:src/target/cucumber-defualt-reports"
 				,"json:target/cucumber.json"
 				}
-				,tags= {"@Add"}
-				, dryRun=false
+				,tags= {"@invalid"}
+				,dryRun=false
+				,monochrome=true
 				)
 public class TestRunner {
 
