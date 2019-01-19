@@ -5,7 +5,7 @@ Feature: Time Module Feature
   Background: 
     Given I logged into OrangeHRM "Admin" and "admin123"
 
-  @Adding
+  @Adding @regression
   Scenario Outline: adding customers
     And I am on Time Module
     When I click Project info
@@ -20,7 +20,7 @@ Feature: Time Module Feature
       | Tannaz Nazar | Desc1       |
       | Mamad Shoki  | Desc2       |
 
-  @Reporting
+  @Reporting @regression
   Scenario Outline: Creating a project
     And I am on Time Module
     When I click Project info
@@ -37,7 +37,7 @@ Feature: Time Module Feature
       | customername | projectName  | projectAdmin  |
       | Tannaz Nazar | projectName1 | Hannah Flores |
       | Mamad Shoki  | projectName2 | Hannah Flores |
-@Verifying
+@Verifying @regression
   Scenario Outline: ability to search project customers
     And I am on Time Module
     When I click Project info

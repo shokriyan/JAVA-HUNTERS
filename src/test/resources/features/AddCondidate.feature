@@ -2,8 +2,9 @@
 Feature: add Candidates
 
   Background: 
-    Given User enter userName "admin" and password "admin123" and click
+    Given I logged into OrangeHRM "admin" and "admin123"
 
+  @regression
   Scenario Outline: Add condidate
     When User click Recruitment Module and click Candidates
     And Click Add
@@ -19,6 +20,7 @@ Feature: add Candidates
       | firstName | middleName | lastName | email           | contactNo  | jobVacancy       | keywords | comments  | DateOfApplication | description             |
       | Test      | J          | Test     | jsmith@test.com | 1234567890 | Finance Asistant | Test     | Test,test | 19-12-2018        | Admin added Test J Test |
 
+  @regression
   Scenario Outline: search added condidate
     When User click Recruitment Module and click Candidates
     And I Select All from "<JobTitle>" and "<jobVacancy>"

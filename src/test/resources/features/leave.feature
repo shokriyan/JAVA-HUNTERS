@@ -6,7 +6,7 @@ Feature: Ability to add Entitlements
   Background: 
     Given I logged into OrangeHRM "Admin" and "admin123"
 
-  @scenario1
+  @scenario1 @regression
   Scenario: Add entitlement to all default employee
     When I click Leave Module and click add Entitlements
     And Add all default employees to "FMLA US" leave type
@@ -24,7 +24,7 @@ Feature: Ability to add Entitlements
       | John Smith       |
       | Ray Bayou Prince |
 
-  @scenario2
+  @scenario2 @regression
   Scenario Outline: Add entitlement for one defual employee
     When I click Leave Module and click add Entitlements
     And Add default employees "<employeeName>" to any leave type besides FMLA US "<leaveType>"
@@ -35,7 +35,7 @@ Feature: Ability to add Entitlements
       | employeeName | leaveType   |
       | John Smith   | Vacation US |
 
-  @scenario3
+  @scenario3 @regression
   Scenario Outline: Assign leave to one employee and check balance
     When I click Leave Module
     And click Assign Leave
@@ -51,7 +51,7 @@ Feature: Ability to add Entitlements
       | Linda Anderson | FMLA US     |    50.0 | 2018-12-10 | 2018-12-14 |         45 |
       | John Smith     | Vacation US |    50.0 | 2018-12-10 | 2018-12-14 |         45 |
 
-  @scenario4
+  @scenario4 @regression
   Scenario Outline: Leave List report functionality
     When I click Leave Module
     And click Leave List

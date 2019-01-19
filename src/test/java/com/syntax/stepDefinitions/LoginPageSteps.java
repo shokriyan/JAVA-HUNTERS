@@ -31,6 +31,8 @@ public class LoginPageSteps {
 
 	@Then("^I successfully logged in$")
 	public void i_successfully_logged_in() {
+		String actualUser = login.getLoggedUser();
+		Assert.assertEquals("Admin", actualUser);
 
 	}
 	

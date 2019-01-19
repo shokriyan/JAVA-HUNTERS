@@ -56,4 +56,13 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
+	
+	public static String getReportConfigPath() {
+		String reportPath = Constants.extentReportPath;
+		if (reportPath!= null)
+			return reportPath;
+		else
+			throw new RuntimeException("Config File Not found");
+		
+	}
 }

@@ -6,4 +6,6 @@ public class Constants {
 	
 	public static String osName=System.getProperty("os.name");
 	
+	public static final String extentReportPath = System.getProperty("user.dir")+"/extent-config.xml";
+	
 }

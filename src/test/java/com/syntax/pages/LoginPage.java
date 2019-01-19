@@ -23,7 +23,15 @@ public class LoginPage extends BaseClass{
 	@FindBy(id="spanMessage")
 	public WebElement errorMessage;
 	
+	@FindBy (id="welcome")
+	private WebElement loggedUser;
+	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public String getLoggedUser() {
+		return loggedUser.getText().substring(8);
+		
 	}
 }

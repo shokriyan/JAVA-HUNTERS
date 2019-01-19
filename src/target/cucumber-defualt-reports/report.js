@@ -1,449 +1,722 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("AddEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("target/test-classes/features/Login.feature");
 formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "#Author: Andrea Ramirez"
+      "value": "#Author: SyntaxTeam"
     }
   ],
-  "line": 2,
-  "name": "US 121335 As an admin, I should have the ability to add, modify and delete an employee.",
+  "line": 3,
+  "name": "Login feature",
   "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "line": 8,
-  "name": "Admin should be able to Add Employees",
-  "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
+  "id": "login-feature",
+  "keyword": "Feature",
   "tags": [
     {
-      "line": 7,
-      "name": "@Add"
+      "line": 2,
+      "name": "@login"
+    }
+  ]
+});
+formatter.before({
+  "duration": 2549170480,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
+});
+formatter.result({
+  "duration": 112060293,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 9,
+  "name": "Valid login",
+  "description": "",
+  "id": "login-feature;valid-login",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@valid"
     }
   ]
 });
 formatter.step({
-  "line": 9,
-  "name": "I will click on PIM link and then click to the Add Employee Page",
+  "line": 10,
+  "name": "I enter \"admin\" and \"admin121\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "I provide the \"\u003cfirst name\u003e\", \"\u003cmiddle name\u003e\" and \"\u003clast name\u003e\" of the employee",
-  "keyword": "Then "
-});
-formatter.step({
   "line": 11,
-  "name": "I successfully added an employee",
-  "keyword": "Then "
+  "name": "I click on login button",
+  "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "I navigated to the Employee List Page",
+  "name": "I successfully logged in",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "admin",
+      "offset": 9
+    },
+    {
+      "val": "admin121",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
+});
+formatter.result({
+  "duration": 193576036,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 546129178,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_successfully_logged_in()"
+});
+formatter.result({
+  "duration": 20056742346,
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"id\",\"selector\":\"welcome\"}\n  (Session info: chrome\u003d71.0.3578.98)\n  (Driver info: chromedriver\u003d2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform\u003dMac OS X 10.14.2 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027mohammads-MBP.lan\u0027, ip: \u0027fe80:0:0:0:48d:2743:fb8e:f6bd%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.2\u0027, java.version: \u00271.8.0_191\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591059 (a3d9684d10d61a..., userDataDir: /var/folders/x3/smdxzkxn7d3...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59080}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}\nSession ID: 10b4ca51a1d38f6caf61ee05b88421c8\n*** Element info: {Using\u003did, value\u003dwelcome}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.getText(Unknown Source)\n\tat com.syntax.pages.LoginPage.getLoggedUser(LoginPage.java:34)\n\tat com.syntax.stepDefinitions.LoginPageSteps.i_successfully_logged_in(LoginPageSteps.java:34)\n\tat ✽.Then I successfully logged in(target/test-classes/features/Login.feature:12)\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded0.png");
+formatter.after({
+  "duration": 604893321,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 15,
+  "name": "Invalid login",
+  "description": "",
+  "id": "login-feature;invalid-login",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 14,
+      "name": "@invalid"
+    }
+  ]
+});
+formatter.step({
+  "line": 16,
+  "name": "I enter \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "I click on login button",
   "keyword": "And "
 });
+formatter.step({
+  "line": 18,
+  "name": "I see error message \"\u003cerrorMessage\u003e\"",
+  "keyword": "Then "
+});
 formatter.examples({
-  "line": 14,
+  "line": 20,
   "name": "",
   "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;",
+  "id": "login-feature;invalid-login;",
   "rows": [
     {
       "cells": [
-        "first name",
-        "middle name",
-        "last name"
+        "username",
+        "password",
+        "errorMessage"
       ],
-      "line": 15,
-      "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;1"
+      "line": 21,
+      "id": "login-feature;invalid-login;;1"
     },
     {
       "cells": [
-        "Bob",
-        "L.",
-        "Smith"
+        "Admin",
+        "Monkey123",
+        "Invalid credentials"
       ],
-      "line": 16,
-      "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;2"
+      "line": 22,
+      "id": "login-feature;invalid-login;;2"
     },
     {
       "cells": [
-        "Louie",
-        "S.",
-        "Clark"
+        "Monkey",
+        "admin123",
+        "Invalid credentials"
       ],
-      "line": 17,
-      "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;3"
+      "line": 23,
+      "id": "login-feature;invalid-login;;3"
     },
     {
       "cells": [
-        "Mark",
-        "L.",
-        "Antho"
+        "Monkey",
+        "Monkey123",
+        "Invalid credentials"
       ],
-      "line": 18,
-      "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;4"
+      "line": 24,
+      "id": "login-feature;invalid-login;;4"
+    },
+    {
+      "cells": [
+        "",
+        "admin123",
+        "Username cannot be empty"
+      ],
+      "line": 25,
+      "id": "login-feature;invalid-login;;5"
+    },
+    {
+      "cells": [
+        "Admin",
+        "",
+        "Password cannot be empty"
+      ],
+      "line": 26,
+      "id": "login-feature;invalid-login;;6"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 18556576662,
+  "duration": 2173147920,
   "status": "passed"
 });
 formatter.background({
-  "line": 4,
+  "line": 5,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 5,
-  "name": "I logged into OrangeHRM \"admin\" and \"admin123\"",
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
   "keyword": "Given "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "admin",
-      "offset": 25
-    },
-    {
-      "val": "admin123",
-      "offset": 37
-    }
-  ],
-  "location": "EntitlementSteps.i_logged_into_OrangeHRM_and(String,String)"
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 2728363335,
+  "duration": 28158752,
   "status": "passed"
 });
 formatter.scenario({
+  "line": 22,
+  "name": "Invalid login",
+  "description": "",
+  "id": "login-feature;invalid-login;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@invalid"
+    }
+  ]
+});
+formatter.step({
   "line": 16,
-  "name": "Admin should be able to Add Employees",
-  "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@Add"
-    }
-  ]
-});
-formatter.step({
-  "line": 9,
-  "name": "I will click on PIM link and then click to the Add Employee Page",
+  "name": "I enter \"Admin\" and \"Monkey123\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "I provide the \"Bob\", \"L.\" and \"Smith\" of the employee",
-  "matchedColumns": [
-    0,
-    1,
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "I successfully added an employee",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "I navigated to the Employee List Page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_will_click_on_PIM_link_and_then_click_to_the_Add_Employee_Page()"
-});
-formatter.result({
-  "duration": 2865865703,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Bob",
-      "offset": 15
-    },
-    {
-      "val": "L.",
-      "offset": 22
-    },
-    {
-      "val": "Smith",
-      "offset": 31
-    }
-  ],
-  "location": "AddEmployeeSteps.i_provide_the_and_of_the_employee(String,String,String)"
-});
-formatter.result({
-  "duration": 482281305,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_successfully_added_an_employee()"
-});
-formatter.result({
-  "duration": 21236622849,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h1[1]\"}\n  (Session info: chrome\u003d71.0.3578.98)\n  (Driver info: chromedriver\u003d2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform\u003dWindows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027DESKTOP-2O2VKEV\u0027, ip: \u0027192.168.1.30\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\\Users\\ALIJAN~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64252}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}\nSession ID: 026b1cac772f6dbaa12fd855baaae898\n*** Element info: {Using\u003dxpath, value\u003d/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h1[1]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.getText(Unknown Source)\r\n\tat com.syntax.stepDefinitions.AddEmployeeSteps.i_successfully_added_an_employee(AddEmployeeSteps.java:41)\r\n\tat ✽.Then I successfully added an employee(AddEmployee.feature:11)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_navigated_to_the_Employee_List_Page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded0.png");
-formatter.after({
-  "duration": 1003524791,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 9327646060,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "I logged into OrangeHRM \"admin\" and \"admin123\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "admin",
-      "offset": 25
-    },
-    {
-      "val": "admin123",
-      "offset": 37
-    }
-  ],
-  "location": "EntitlementSteps.i_logged_into_OrangeHRM_and(String,String)"
-});
-formatter.result({
-  "duration": 1885645035,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 17,
-  "name": "Admin should be able to Add Employees",
-  "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 7,
-      "name": "@Add"
-    }
-  ]
+  "name": "I click on login button",
+  "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "I will click on PIM link and then click to the Add Employee Page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "I provide the \"Louie\", \"S.\" and \"Clark\" of the employee",
+  "line": 18,
+  "name": "I see error message \"Invalid credentials\"",
   "matchedColumns": [
-    0,
-    1,
     2
   ],
   "keyword": "Then "
 });
-formatter.step({
-  "line": 11,
-  "name": "I successfully added an employee",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "I navigated to the Employee List Page",
-  "keyword": "And "
-});
 formatter.match({
-  "location": "AddEmployeeSteps.i_will_click_on_PIM_link_and_then_click_to_the_Add_Employee_Page()"
+  "arguments": [
+    {
+      "val": "Admin",
+      "offset": 9
+    },
+    {
+      "val": "Monkey123",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 1863505843,
+  "duration": 188475620,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 567971198,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Louie",
-      "offset": 15
-    },
-    {
-      "val": "S.",
-      "offset": 24
-    },
-    {
-      "val": "Clark",
-      "offset": 33
+      "val": "Invalid credentials",
+      "offset": 21
     }
   ],
-  "location": "AddEmployeeSteps.i_provide_the_and_of_the_employee(String,String,String)"
+  "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 572226038,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_successfully_added_an_employee()"
-});
-formatter.result({
-  "duration": 1225142113,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_navigated_to_the_Employee_List_Page()"
-});
-formatter.result({
-  "duration": 1483645586,
+  "duration": 25813685,
   "status": "passed"
 });
 formatter.after({
-  "duration": 788109111,
+  "duration": 82085078,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8048786515,
+  "duration": 2398689038,
   "status": "passed"
 });
 formatter.background({
-  "line": 4,
+  "line": 5,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 5,
-  "name": "I logged into OrangeHRM \"admin\" and \"admin123\"",
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
   "keyword": "Given "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "admin",
-      "offset": 25
-    },
-    {
-      "val": "admin123",
-      "offset": 37
-    }
-  ],
-  "location": "EntitlementSteps.i_logged_into_OrangeHRM_and(String,String)"
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 1743153324,
+  "duration": 66776005,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 18,
-  "name": "Admin should be able to Add Employees",
+  "line": 23,
+  "name": "Invalid login",
   "description": "",
-  "id": "us-121335-as-an-admin,-i-should-have-the-ability-to-add,-modify-and-delete-an-employee.;admin-should-be-able-to-add-employees;;4",
+  "id": "login-feature;invalid-login;;3",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 7,
-      "name": "@Add"
+      "line": 2,
+      "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@invalid"
     }
   ]
 });
 formatter.step({
-  "line": 9,
-  "name": "I will click on PIM link and then click to the Add Employee Page",
+  "line": 16,
+  "name": "I enter \"Monkey\" and \"admin123\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "I provide the \"Mark\", \"L.\" and \"Antho\" of the employee",
+  "line": 17,
+  "name": "I click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I see error message \"Invalid credentials\"",
   "matchedColumns": [
-    0,
-    1,
     2
   ],
   "keyword": "Then "
 });
-formatter.step({
-  "line": 11,
-  "name": "I successfully added an employee",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "I navigated to the Employee List Page",
-  "keyword": "And "
-});
 formatter.match({
-  "location": "AddEmployeeSteps.i_will_click_on_PIM_link_and_then_click_to_the_Add_Employee_Page()"
+  "arguments": [
+    {
+      "val": "Monkey",
+      "offset": 9
+    },
+    {
+      "val": "admin123",
+      "offset": 22
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 1975163035,
+  "duration": 194950769,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 251865565,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Mark",
-      "offset": 15
-    },
-    {
-      "val": "L.",
-      "offset": 23
-    },
-    {
-      "val": "Antho",
-      "offset": 32
+      "val": "Invalid credentials",
+      "offset": 21
     }
   ],
-  "location": "AddEmployeeSteps.i_provide_the_and_of_the_employee(String,String,String)"
+  "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 448572951,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_successfully_added_an_employee()"
-});
-formatter.result({
-  "duration": 996354018,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_navigated_to_the_Employee_List_Page()"
-});
-formatter.result({
-  "duration": 1320326465,
+  "duration": 28669148,
   "status": "passed"
 });
 formatter.after({
-  "duration": 850564898,
+  "duration": 84183538,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2538991499,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
+});
+formatter.result({
+  "duration": 28522221,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "Invalid login",
+  "description": "",
+  "id": "login-feature;invalid-login;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@invalid"
+    }
+  ]
+});
+formatter.step({
+  "line": 16,
+  "name": "I enter \"Monkey\" and \"Monkey123\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "I click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I see error message \"Invalid credentials\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Monkey",
+      "offset": 9
+    },
+    {
+      "val": "Monkey123",
+      "offset": 22
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
+});
+formatter.result({
+  "duration": 202904444,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 263408877,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Invalid credentials",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_see_error_message(String)"
+});
+formatter.result({
+  "duration": 27010906,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 95117365,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3305518470,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
+});
+formatter.result({
+  "duration": 30217746,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "Invalid login",
+  "description": "",
+  "id": "login-feature;invalid-login;;5",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@invalid"
+    }
+  ]
+});
+formatter.step({
+  "line": 16,
+  "name": "I enter \"\" and \"admin123\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "I click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I see error message \"Username cannot be empty\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "",
+      "offset": 9
+    },
+    {
+      "val": "admin123",
+      "offset": 16
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
+});
+formatter.result({
+  "duration": 184097744,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 81812912,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Username cannot be empty",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_see_error_message(String)"
+});
+formatter.result({
+  "duration": 25189903,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 92586754,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2266673759,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "OrangeHRM logo is displayed",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
+});
+formatter.result({
+  "duration": 33911732,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "Invalid login",
+  "description": "",
+  "id": "login-feature;invalid-login;;6",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@invalid"
+    }
+  ]
+});
+formatter.step({
+  "line": 16,
+  "name": "I enter \"Admin\" and \"\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "I click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I see error message \"Password cannot be empty\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Admin",
+      "offset": 9
+    },
+    {
+      "val": "",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_enter_and(String,String)"
+});
+formatter.result({
+  "duration": 219299556,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginPageSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "duration": 111303653,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Password cannot be empty",
+      "offset": 21
+    }
+  ],
+  "location": "LoginPageSteps.i_see_error_message(String)"
+});
+formatter.result({
+  "duration": 36619058,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 85517804,
   "status": "passed"
 });
 });
