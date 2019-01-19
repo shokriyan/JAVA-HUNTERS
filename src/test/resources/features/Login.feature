@@ -7,7 +7,7 @@ Feature: Login feature
 
   @valid @regression
   Scenario: Valid login
-    When I enter "admin" and "admin121"
+    When I enter "admin" and "admin123"
     And I click on login button
     Then I successfully logged in
 

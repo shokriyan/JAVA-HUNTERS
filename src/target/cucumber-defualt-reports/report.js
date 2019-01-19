@@ -19,7 +19,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2549170480,
+  "duration": 2677352153,
   "status": "passed"
 });
 formatter.background({
@@ -38,7 +38,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 112060293,
+  "duration": 202781230,
   "status": "passed"
 });
 formatter.scenario({
@@ -52,12 +52,16 @@ formatter.scenario({
     {
       "line": 8,
       "name": "@valid"
+    },
+    {
+      "line": 8,
+      "name": "@regression"
     }
   ]
 });
 formatter.step({
   "line": 10,
-  "name": "I enter \"admin\" and \"admin121\"",
+  "name": "I enter \"admin\" and \"admin123\"",
   "keyword": "When "
 });
 formatter.step({
@@ -77,34 +81,32 @@ formatter.match({
       "offset": 9
     },
     {
-      "val": "admin121",
+      "val": "admin123",
       "offset": 21
     }
   ],
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 193576036,
+  "duration": 203542024,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 546129178,
+  "duration": 1597610183,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_successfully_logged_in()"
 });
 formatter.result({
-  "duration": 20056742346,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"id\",\"selector\":\"welcome\"}\n  (Session info: chrome\u003d71.0.3578.98)\n  (Driver info: chromedriver\u003d2.42.591059 (a3d9684d10d61aa0c45f6723b327283be1ebaad8),platform\u003dMac OS X 10.14.2 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027mohammads-MBP.lan\u0027, ip: \u0027fe80:0:0:0:48d:2743:fb8e:f6bd%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.2\u0027, java.version: \u00271.8.0_191\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591059 (a3d9684d10d61a..., userDataDir: /var/folders/x3/smdxzkxn7d3...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59080}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}\nSession ID: 10b4ca51a1d38f6caf61ee05b88421c8\n*** Element info: {Using\u003did, value\u003dwelcome}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.getText(Unknown Source)\n\tat com.syntax.pages.LoginPage.getLoggedUser(LoginPage.java:34)\n\tat com.syntax.stepDefinitions.LoginPageSteps.i_successfully_logged_in(LoginPageSteps.java:34)\n\tat ✽.Then I successfully logged in(target/test-classes/features/Login.feature:12)\n",
-  "status": "failed"
+  "duration": 31499052,
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 604893321,
+  "duration": 90136006,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -118,6 +120,10 @@ formatter.scenarioOutline({
     {
       "line": 14,
       "name": "@invalid"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     }
   ]
 });
@@ -200,7 +206,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2173147920,
+  "duration": 1807372306,
   "status": "passed"
 });
 formatter.background({
@@ -219,7 +225,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 28158752,
+  "duration": 28861662,
   "status": "passed"
 });
 formatter.scenario({
@@ -233,6 +239,10 @@ formatter.scenario({
     {
       "line": 2,
       "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     },
     {
       "line": 14,
@@ -276,14 +286,14 @@ formatter.match({
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 188475620,
+  "duration": 197191411,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 567971198,
+  "duration": 510656532,
   "status": "passed"
 });
 formatter.match({
@@ -296,15 +306,15 @@ formatter.match({
   "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 25813685,
+  "duration": 31208470,
   "status": "passed"
 });
 formatter.after({
-  "duration": 82085078,
+  "duration": 80819265,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2398689038,
+  "duration": 1901636498,
   "status": "passed"
 });
 formatter.background({
@@ -323,7 +333,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 66776005,
+  "duration": 35578503,
   "status": "passed"
 });
 formatter.scenario({
@@ -337,6 +347,10 @@ formatter.scenario({
     {
       "line": 2,
       "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     },
     {
       "line": 14,
@@ -380,14 +394,14 @@ formatter.match({
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 194950769,
+  "duration": 226909832,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 251865565,
+  "duration": 276194705,
   "status": "passed"
 });
 formatter.match({
@@ -400,15 +414,15 @@ formatter.match({
   "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 28669148,
+  "duration": 31181219,
   "status": "passed"
 });
 formatter.after({
-  "duration": 84183538,
+  "duration": 85980841,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2538991499,
+  "duration": 1968765920,
   "status": "passed"
 });
 formatter.background({
@@ -427,7 +441,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 28522221,
+  "duration": 35804247,
   "status": "passed"
 });
 formatter.scenario({
@@ -441,6 +455,10 @@ formatter.scenario({
     {
       "line": 2,
       "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     },
     {
       "line": 14,
@@ -484,14 +502,14 @@ formatter.match({
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 202904444,
+  "duration": 214482097,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 263408877,
+  "duration": 258641989,
   "status": "passed"
 });
 formatter.match({
@@ -504,15 +522,15 @@ formatter.match({
   "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 27010906,
+  "duration": 33217959,
   "status": "passed"
 });
 formatter.after({
-  "duration": 95117365,
+  "duration": 83201783,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3305518470,
+  "duration": 1841399506,
   "status": "passed"
 });
 formatter.background({
@@ -531,7 +549,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 30217746,
+  "duration": 29479670,
   "status": "passed"
 });
 formatter.scenario({
@@ -545,6 +563,10 @@ formatter.scenario({
     {
       "line": 2,
       "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     },
     {
       "line": 14,
@@ -588,14 +610,14 @@ formatter.match({
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 184097744,
+  "duration": 184278106,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 81812912,
+  "duration": 82421931,
   "status": "passed"
 });
 formatter.match({
@@ -608,15 +630,15 @@ formatter.match({
   "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 25189903,
+  "duration": 25622284,
   "status": "passed"
 });
 formatter.after({
-  "duration": 92586754,
+  "duration": 78054610,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2266673759,
+  "duration": 1899715607,
   "status": "passed"
 });
 formatter.background({
@@ -635,7 +657,7 @@ formatter.match({
   "location": "LoginPageSteps.orangehrm_logo_is_displayed()"
 });
 formatter.result({
-  "duration": 33911732,
+  "duration": 26059542,
   "status": "passed"
 });
 formatter.scenario({
@@ -649,6 +671,10 @@ formatter.scenario({
     {
       "line": 2,
       "name": "@login"
+    },
+    {
+      "line": 14,
+      "name": "@regression"
     },
     {
       "line": 14,
@@ -692,14 +718,14 @@ formatter.match({
   "location": "LoginPageSteps.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 219299556,
+  "duration": 178167583,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageSteps.i_click_on_login_button()"
 });
 formatter.result({
-  "duration": 111303653,
+  "duration": 75276763,
   "status": "passed"
 });
 formatter.match({
@@ -712,11 +738,11 @@ formatter.match({
   "location": "LoginPageSteps.i_see_error_message(String)"
 });
 formatter.result({
-  "duration": 36619058,
+  "duration": 26611793,
   "status": "passed"
 });
 formatter.after({
-  "duration": 85517804,
+  "duration": 82251976,
   "status": "passed"
 });
 });
